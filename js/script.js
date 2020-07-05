@@ -1,17 +1,19 @@
 /* jshint -W097 */
 "use strict";
 
-// alert('Hello');
+let numberOfFilms;
 
-// const resoult = confirm('are you here?');
+numberOfFilms = prompt('Сколько фильмов ты смотрел?', '3')
 
-// const answer = prompt('zzz?', '');
-// alert(typeof(answer));
+const personalMovieDB = {
+    count: +numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    private: false
+};
 
-const answers = [];
+let oneMovie = prompt('Назови один из последнийх фильмов', '');
+let movieScore = prompt('На что его оценишь?', '');
 
-answers[0] = prompt('1?', '');
-answers[1] = prompt('2?', '');
-answers[2] = prompt('3?', '');
-
-document.write(answers);
+personalMovieDB.movies[oneMovie] = movieScore;
